@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #d4af37; /* Metallic Gold */
+  --color-brand-light: #f5d166;
+  --color-brand-dark: #b5952d;
+  
+  --color-dark-main: #0a0a0a; /* Deep Charcoal */
+  --color-dark-soft: #171717; /* Soft Black */
+  
+  --font-family-sans: "Inter", "Outfit", sans-serif;
+  --font-family-serif: "Playfair Display", serif;
+}
+
+/* Global Styles */
+body {
+  @apply bg-dark-main text-white font-sans antialiased overflow-x-hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif;
+}
+
+/* Custom Utilities */
+.glass-panel {
+  @apply bg-dark-soft/80 backdrop-blur-md border border-white/10;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand to-brand-light;
+}
